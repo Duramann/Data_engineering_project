@@ -7,6 +7,8 @@
   Project of a group of 3 persons at EFREI Paris for the Data Engineering course.
 </div>
 
+<br />
+
 <div align="center">
   <!-- Maintenance -->
     <img src="https://img.shields.io/maintenance/yes/2021?style=for-the-badge"
@@ -28,6 +30,8 @@
   <!--  <img src="https://img.shields.io/github/status/contexts/pulls/Duramann/Data_engineering_project/0?style=for-the-badge"-->
   <!--    alt="pulls" />-->
 </div>
+
+<br />
 
 <div align="center">
   <sub>Project made by
