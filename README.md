@@ -35,8 +35,7 @@
 
 <div align="center">
   <sub>Project made by
-  <a href="https://github.com/Duramann">Théo Dura</a> , and
-  <a href="https://github.com/EFR-AI/AIBSIF/graphs/contributors">
-    contributors
+  <a href="https://github.com/Duramann">Théo Dura</a>,
+  <a href="https://github.com/Duramann">Philippe Lao</a>,
   </a>
 </div>
