@@ -49,6 +49,11 @@ body {
     text-align: center;
 }
 
+.predictext {
+  font-family: "cresta";
+  text-align: center;
+}
+
 .bn30 {
     display: center;
     font-family: "landre";
