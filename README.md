@@ -4,7 +4,7 @@
    <strong> Dockerized web interface for sentiment analysis </strong>
 </div>
 <div align="center">
-  Project of a group of 3 persons at EFREI Paris for the Data Engineering course.
+  Project of a group of 2 persons at EFREI Paris for the Data Engineering course.
 </div>
 
 <br />
@@ -36,6 +36,6 @@
 <div align="center">
   <sub>Project made by
   <a href="https://github.com/Duramann">Théo Dura</a>,
-  <a href="https://github.com/Duramann">Philippe Lao</a>,
+  <a href="https://github.com/plao1996">Philippe Lao</a>,
   </a>
 </div>
