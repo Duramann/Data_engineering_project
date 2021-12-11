@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import nltk
+nltk.download('vader_lexicon')
 
 app = Flask(__name__)
 
@@ -8,9 +11,28 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    texte = [str(x) for x in request.form.values()]
+    texte = request.form['texte']
+    model = SentimentIntensityAnalyzer()
+    score = ((model.polarity_scores(str(texte))))['compound']
+
+    if(score > 0):
+        label = 'This sentence is positive'
+    elif(score == 0):
+        label = 'This sentence is neutral'
+    else:
+        label = 'This sentence is negative'
+        
+    return render_template('index.html', prediction=label, sentcolor=color)
+
+
+
+
+
+   
+
+
     #if pred == 1:
         #color = green, prediction = 'Positiv'
-    color = '#f64c46'
+    #color = '#f64c46'
+
     
-    return render_template('index.html', prediction='Not yet implemented !', sentcolor=color)
