@@ -13,13 +13,13 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
+
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
     if request.method == "GET":
         return redirect('/')
         
     if request.method == 'POST':
-
         texte = [str(x) for x in request.form.values()]
         
         no_punc = []
@@ -50,17 +50,3 @@ def predict():
             color = "#cdccff"
         
         return render_template('index.html', prediction=pred, sentcolor=color)
-    
-
-
-
-
-
-   
-
-
-    #if pred == 1:
-        #color = green, prediction = 'Positiv'
-    #color = '#f64c46'
-
-    
