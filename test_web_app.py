@@ -1,25 +1,37 @@
 import requests
 import web_app
 import pytest
-import time
+import nltk
+import vaderSentiment
+import string
 
-def test_url():
-    response = requests.get("http://localhost:5000")
-    assert response.status_code == 200
-    response = requests.get("http://localhost:5000/predict")
-    assert response.status_code == 200
+@pytest.fixture
+def client():
+    app = web_app.app
+    app.config['TESTING'] = True
 
-def test_input():
-    response = requests.post("http://localhost:5000/predict", data="This is a test sentence")
-    answer = response.text
-    assert response.status_code == 200
-    assert 'Not yet implemented !' in answer
+    with app.app_context():
+        with app.test_client() as client:
+            yield client
 
-    
-def test_stress():
-    time = []
-    for i in range(1000):
-        response = requests.get("http://localhost:5000")
-        time.append(response.elapsed.total_seconds()*1000)
-    avg_time = sum(time)/len(time)
-    assert avg_time < 100
+def test_status(client):
+    mp = client.get("/")
+    assert mp.status_code == 200
+    red = client.get("/predict")
+    assert mp.status_code == 200
+
+def test_predic(client):
+    pred1 = client.post('/predict', data={"sentence":"Today was a good day!"})
+    assert b'positive' in pred1.data
+    pred2 = client.post('/predict', data={"sentence":"Today was a bad day!"})
+    assert b'negative' in pred2.data
+    pred3 = client.post('/predict', data={"sentence":"Dogs are animals."})
+    assert b'neutral' in pred3.data
+
+#def test_stress(client):
+#    time = []
+#    for i in range(1000):
+#        res = client.get('/')
+#        time.append(res.elapsed.total_seconds()*1000)
+#    avg_time = sm(time)/len(time)
+#    assert avg_time < 100
