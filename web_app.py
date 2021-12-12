@@ -20,7 +20,8 @@ def predict():
         return redirect('/')
         
     if request.method == 'POST':
-        texte = [str(x) for x in request.form.values()]
+        rawtext = request.form.values()
+        texte = [str(x) for x in rawtext]
         
         no_punc = []
         for w in texte:
@@ -40,13 +41,15 @@ def predict():
         score = model.polarity_scores(to_process)["compound"]
         
         if score > 0 : 
-            pred = "The sentence is overall positive."
+            pred = "It is overall positive."
             color = "#a9ecbc"
         if score < 0 :
-            pred = "The sentence is overall negative."
+            pred = "It is overall negative."
             color = "#C64444"
         if score == 0 : 
-            pred = "The sentence is overall neutral."
+            pred = "It is overall neutral."
             color = "#cdccff"
+
+        printtexte = " ".join([w for w in texte])
         
-        return render_template('index.html', prediction=pred, sentcolor=color)
+        return render_template('index.html', prediction=pred, sentcolor=color, topredict='The sentence to analyse was : "' + printtexte + '"')

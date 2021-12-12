@@ -22,7 +22,8 @@ body {
     justify-content: center;
     background-color: #292626;
     width: 60%;
-    height: 550px;
+    min-height: 600px;
+    height : auto;
 }
 
 @font-face {
@@ -40,7 +41,7 @@ body {
     font-family: "landre";
     font-weight: 10;
     font-size:50px;
-    margin-bottom: -20px;
+    margin-bottom: -20px auto;
 }
 
 .informations {
