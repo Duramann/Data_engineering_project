@@ -33,6 +33,48 @@
 
 <br />
 
+### Project organization : <br />
+
+<h2 id="directory-structure">Directory structure</h2>
+<pre><code class="language-nohighlight">
+├── README.md               &lt;- The top-level README for developers using this project.
+├── data                    &lt;- Dataset used to measure the model accuracy. Found at : https://www.kaggle.com/marklvl/sentiment-labelled-sentences-data-set
+│   └── labelled_sentence.csv   
+│   
+│
+├── static                  &lt;- The folder containing the css files.
+│      └── css       
+│ 
+├── templates               &lt;- The folder containing the html files.
+│
+├── docker-compose.yaml     &lt;- The docker compose properties to define the multi-container docker application. <strong> The port used is "5000" </strong>
+│
+├── Dockerfile.dockerfile   &lt;- The docker image for the application.
+│
+├── requirements.txt        &lt;- The requirements for the Docker image <strong>[flask,nltk,vaderSentiment,requests].</strong>
+│
+├── web_app.py              &lt;- The python script to define the web application and link it to the model.
+│
+└── test_web_app.py         &lt;- The python script for unit and integration testing.
+
+</code></pre>
+
+### Demonstration : 
+
+<div align="center">
+<img align="center" width="500px" src="static/Positive.gif" />
+<img align="center" width="500px" src="static/Negative.gif" />
+</div>
+
+### Project Management : <br />
+
+A Trello was created to coordinate the tasks between the team members.
+
+<div align="center">
+  
+  <a href="https://trello.com/b/X5G8QLou/data-engineering-project"><img width="300px" src="https://logos-world.net/wp-content/uploads/2021/02/Trello-Logo.png"/></a>
+</div>
+
 <div align="center">
 <strong> Languages and Tools: </strong>
 </div>
@@ -45,48 +87,6 @@
 </div>
 
 <br />
-
-### Project Objective : <br />
-
-Building a docker image containing a sentiment analysis application using Flask web app. <br />
-
-### Project Management : <br />
-
-A Trello was created to coordinate the tasks between the team members.
-
-<div align="center">
-  <sub>Link to the trello
-  <a href="https://trello.com/b/X5G8QLou/data-engineering-project"><img src="https://logos-world.net/wp-content/uploads/2021/02/Trello-Logo.png"/></a>
-</div>
-
-### Project organization : <br />
-
-├── README.md <br />
-├── data <br />
-│      ├── labelled_sentence <- Dataset used during the testing. It provides the function that check if the accuracy of our back-end model is above or equal to 70% <br />
-│ <br />
-├── static <br />
-│      ├── CSS <br />
-│      │      ├── style <- Setting the style of the web page <br />
-│      ├── fonts   <- providing the fonts of the webpage's texts <br />  
-│      ├── background  <- background image of the website <br />  
-│      ├── Negative   <- demo of the web app use when the result is negative<br />  
-│      └── Positive   <- demo of the web app use when the result is negative  <br />       
-│ <br />
-├── templates <br />
-│      ├── index <- fonctional contents of the web page  <br />
-│ <br />
-├── docker-compose.yaml <- configure the web application's services, the port use for the run is "5000" <br />
-│ <br />
-├── dockerfile <- Building the Docker image with : Python/Flask/Libraries (from the requirements.txt), on the port "5000"  <br />
-│ <br />
-├── dockerfile <- Building the Docker image with : Python/Flask/Libraries (from the requirements.txt), on the port "5000"  <br />
-│ <br />
-├── requirements.txt <- The libaries used are : flask==1.1.2/ nltk>=3.4.5/ requests/ vaderSentiment==3.2.1<br />
-│ <br />
-├── web_app.py <- unit and integration tests for the application <br />
-│ <br />
-├── test_web_app.py <- unit and integration tests for the application <br />
 
 
 
