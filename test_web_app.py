@@ -17,12 +17,13 @@ def client():
         with app.test_client() as client:
             yield client
 
-## Test if the site is working for "/" route and "/predict" route.
+## Test if the site is working for "/" route and "/predict" post route.
+## Test if the get route for "/predict" redirect corretly.
 def test_status(client):
     mp = client.get("/")
     assert mp.status_code == 200
-    red = client.get("/predict")
-    assert mp.status_code == 200
+    pred = client.get("/predict")
+    assert pred.status_code == 302
     predicted = client.post('/predict', data={"sentence":"Today was a good day!"})
     assert predicted.status_code == 200
 
