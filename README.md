@@ -23,12 +23,12 @@
     <img src="https://img.shields.io/github/commit-activity/w/Duramann/Data_engineering_project?style=for-the-badge"
       alt="Activity" />
   </a>
-  <!-- Size -->
-    <img src="https://img.shields.io/github/repo-size/Duramann/Data_engineering_project?style=for-the-badge"
-      alt="size" />
   <!-- PR -->
   <!--  <img src="https://img.shields.io/github/status/contexts/pulls/Duramann/Data_engineering_project/0?style=for-the-badge"-->
   <!--    alt="pulls" />-->
+  <!-- Size -->
+    <img src="https://img.shields.io/github/repo-size/Duramann/Data_engineering_project?style=for-the-badge"
+      alt="size" />
 </div>
 
 <br />
