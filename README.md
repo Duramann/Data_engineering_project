@@ -56,7 +56,16 @@
 │
 └── test_web_app.py         &lt;- The python script for unit and integration testing.
 
-</code></pre>
+</code></pre><br />
+
+On Github, several branches were created during the project and were deleted when merged.
+
+* __web_app__ : to design the html and css and render a first web application.
+* __model_app__ : to add the model, its prediction and link it to the web application.
+* __testing__ : to do the testing parts.
+* __documentation__ : to work on the documentation.
+
+<br />
 
 ### Demonstration : 
 
