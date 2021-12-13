@@ -60,7 +60,7 @@
 
 ### Demonstration : 
 
-<p> To start the application, run *docker-compose up* at the root of the projet. The application is now running at __localhost:5000__
+<p> To start the application, run <strong>docker-compose up</strong> at the root of the projet. The application is now running at <em>localhost:5000</em>
 
 <div align="center">
 <h2> When entering a positive sentence : </h2> <br />
