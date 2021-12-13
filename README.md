@@ -35,7 +35,6 @@
 
 ### Project organization : <br />
 
-<h2 id="directory-structure">Directory structure</h2>
 <pre><code class="language-nohighlight">
 ├── README.md               &lt;- The top-level README for developers using this project.
 ├── data                    &lt;- Dataset used to measure the model accuracy. Found at : https://www.kaggle.com/marklvl/sentiment-labelled-sentences-data-set
@@ -61,12 +60,25 @@
 
 ### Demonstration : 
 
+<p> To start the application, run *docker-compose up* at the root of the projet. The application is now running at __localhost:5000__
+
 <div align="center">
 <h2> When entering a positive sentence : </h2> <br />
 <img align="center" src="static/Positive.gif" /> <br />
 <h2> When entering a negative sentence : </h2> <br />
 <img align="center" src="static/Negative.gif" />
 </div>
+
+### Performed tests :
+
+Here are the test that we performed in test_web_app.py : 
+
+* Is the application working for "/" route and "/predict" post route.
+* Is the get route for "/predict" redirecting corretly.
+* Is the application rendering the correct html page.
+* Several sentence were tested to see if the prediction was correct.
+* Stress testing of the home page and the prediction page.
+* Accuracy testing of our back-end model.
 
 ### Project Management : <br />
 
@@ -89,9 +101,6 @@ A Trello was created to coordinate the tasks between the team members.
 </div>
 
 <br />
-
-
-
 
 <div align="center">
   <sub>Project made by
