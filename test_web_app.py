@@ -27,7 +27,16 @@ def test_status(client):
     predicted = client.post('/predict', data={"sentence":"Today was a good day!"})
     assert predicted.status_code == 200
 
-## Test if the site returns the correct answer when sending sentence to analyse.
+##Test if the site is rendering the correct html page:
+def test_html(client):
+    mp = client.get("/")
+    assert b'<!DOCTYPE html>' in mp.data
+    assert b'<title>Sentiment Analysis</title>' in mp.data
+    predicted = client.post('/predict', data={"sentence":"Today was a good day!"})
+    assert b'<!DOCTYPE html>' in mp.data
+    assert b'<title>Sentiment Analysis</title>' in mp.data
+
+## Test if the site returns the correct prediction when sending sentence to analyse.
 def test_predic(client):
     pred_pos = client.post('/predict', data={"sentence":"Today was a good day!"})
     assert b'positive' in pred_pos.data
