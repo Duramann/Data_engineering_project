@@ -62,8 +62,8 @@
 ### Demonstration : 
 
 <div align="center">
-<img align="center" width="500px" src="static/Positive.gif" />
-<img align="center" width="500px" src="static/Negative.gif" />
+<img align="center" width="45%" src="static/Positive.gif" />
+<img align="center" width="45%" src="static/Negative.gif" />
 </div>
 
 ### Project Management : <br />
