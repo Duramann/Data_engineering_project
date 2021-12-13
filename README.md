@@ -65,8 +65,6 @@ On Github, several branches were created during the project and were deleted whe
 * __testing__ : to do the testing parts.
 * __documentation__ : to work on the documentation.
 
-<br />
-
 ### Demonstration : 
 
 <p> To start the application, run <strong>docker-compose up</strong> at the root of the projet. The application is now running at <em>localhost:5000</em>
