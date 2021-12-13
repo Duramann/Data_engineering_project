@@ -52,4 +52,5 @@ def predict():
 
         printtexte = " ".join([w for w in texte])
         
+
         return render_template('index.html', prediction=pred, sentcolor=color, topredict='The sentence to analyse was : "' + printtexte + '"')
