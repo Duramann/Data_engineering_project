@@ -62,8 +62,10 @@
 ### Demonstration : 
 
 <div align="center">
-<img align="center" width="45%" src="static/Positive.gif" />
-<img align="center" width="45%" src="static/Negative.gif" />
+<h2> When entering a positive sentence : </h2> <br />
+<img align="center" src="static/Positive.gif" /> <br />
+<h2> When entering a negative sentence : </h2> <br />
+<img align="center" src="static/Negative.gif" />
 </div>
 
 ### Project Management : <br />
