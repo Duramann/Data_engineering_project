@@ -109,6 +109,7 @@ A Trello was created to coordinate the tasks between the team members.
 
 <br />
 
+
 <div align="center">
   <sub>Project made by
   <a href="https://github.com/Duramann">Théo Dura</a>,
